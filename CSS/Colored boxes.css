@@ -1,0 +1,29 @@
+body {
+  background-color: #f4f4f4;
+}
+.color-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.color-box {
+  width: 120px;
+  height: 120px;
+}
+.color1 {
+  background-color: #3498db;
+}
+.color2 {
+  background-color: rgb(255, 100, 50);
+}
+.color3 {
+  background-color: gold;
+}
+.color4 {
+  background-color: hsl(200, 80%, 40%);
+}
+.color5 {
+  background-color: rgba(100, 50, 180, 0.7);
+}
+
+
