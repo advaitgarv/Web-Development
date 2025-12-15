@@ -47,7 +47,6 @@ function getResults(questionObj, computerChoice) {
 }
 const selectedQuestion = getRandomQuestion(questions);
 const computerChoice = getRandomComputerChoice(selectedQuestion.choices);
-
 console.log("Question:", selectedQuestion.question);
 console.log("Computer chose:", computerChoice);
 console.log(getResults(selectedQuestion, computerChoice));
