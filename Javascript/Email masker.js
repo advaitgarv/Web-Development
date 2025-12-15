@@ -1,4 +1,3 @@
-
 function maskEmail(email) {
   const atIndex = email.indexOf("@");
   const name = email.slice(0, atIndex);
@@ -9,7 +8,5 @@ function maskEmail(email) {
     name[name.length - 1];
   return masked + domain;
 }
-
 let email = "apple.pie@example.com";
-
 console.log(maskEmail(email));
