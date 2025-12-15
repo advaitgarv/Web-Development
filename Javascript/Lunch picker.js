@@ -1,4 +1,3 @@
-
 let lunches = [];
 function addLunchToEnd(arr, item) {
   arr.push(item);
@@ -44,5 +43,3 @@ function showLunchMenu(arr) {
   }
   console.log(`Menu items: ${arr.join(", ")}`);
 }
-
-
