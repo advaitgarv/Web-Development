@@ -1,4 +1,3 @@
-
 console.log("Hello! I'm your coding fun fact guide!");
 let botName = "CodeBot3000";
 let botLocation = "Silicon Valley";
