@@ -15,5 +15,3 @@ function golfScore(par, strokes) {
     return "Go Home!";
   }
 }
-
-
