@@ -1,5 +1,3 @@
-
-
 let count = 0;
 function cc(card) {
   if ([2, 3, 4, 5, 6].includes(card)) {
@@ -13,6 +11,3 @@ function cc(card) {
     return count + " Hold";
   }
 }
-
-
-
