@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+#drum-machine {
+  text-align: center;
+}
+#pad-bank {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.drum-pad {
+  background: #ccc;
+  padding: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+#display {
+  background: #eee;
+  padding: 10px;
+}
