@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Advanced QR Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>Advanced QR Code Generator</h1>
+
+    <div class="form">
+        <label>Text / URL</label>
+        <textarea id="qrText" placeholder="Enter text or URL"></textarea>
+
+        <div class="row">
+            <div>
+                <label>Size (px)</label>
+                <input type="number" id="qrSize" value="250" min="100" max="500">
+            </div>
+
+            <div>
+                <label>Error Correction</label>
+                <select id="qrError">
+                    <option value="L">Low (L)</option>
+                    <option value="M" selected>Medium (M)</option>
+                    <option value="Q">Quartile (Q)</option>
+                    <option value="H">High (H)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label>Foreground Color</label>
+                <input type="color" id="qrColorDark" value="#000000">
+            </div>
+
+            <div>
+                <label>Background Color</label>
+                <input type="color" id="qrColorLight" value="#ffffff">
+            </div>
+        </div>
+
+        <label>Embed Logo (optional)</label>
+        <input type="file" id="logoInput" accept="image/*">
+
+        <button onclick="generateQR()">Generate QR Code</button>
+        <button class="secondary" onclick="downloadQR()">Download PNG</button>
+    </div>
+
+    <div class="output">
+        <div id="qrCode"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
