@@ -1,0 +1,175 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+    --card-bg: rgba(255, 255, 255, 0.12);
+    --card-border: rgba(255, 255, 255, 0.25);
+    --text-main: #ffffff;
+    --accent: #00e0ff;
+    --danger: #ff4d4d;
+    --success: #2ecc71;
+    --blur: blur(18px);
+    --radius: 16px;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    --transition: 0.35s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+}
+
+.container {
+    width: 420px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border var(--transition), background var(--transition);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    border: 1px solid var(--accent);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+button {
+    width: 48%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #0b0b0b;
+    background: linear-gradient(135deg, #00e0ff, #00ffa2);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 224, 255, 0.6);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:last-child {
+    float: right;
+    background: linear-gradient(135deg, #ff7676, #ff4d4d);
+    color: white;
+}
+
+button:last-child:hover {
+    box-shadow: 0 12px 30px rgba(255, 77, 77, 0.6);
+}
+
+p {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+#displayBalance {
+    font-weight: 700;
+    color: var(--success);
+}
+
+ul {
+    max-height: 140px;
+    overflow-y: auto;
+    list-style: none;
+    margin-top: 10px;
+    padding-right: 6px;
+}
+
+li {
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    animation: fadeSlide 0.4s ease forwards;
+}
+
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
