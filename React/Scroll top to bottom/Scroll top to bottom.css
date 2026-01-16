@@ -1,0 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.content {
+  min-height: 200vh;
+}
